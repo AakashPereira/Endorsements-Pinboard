@@ -90,7 +90,7 @@ onValue(endorsementsInDB, function(snapshot) {
         linkBtn.setAttribute("aria-label", "Copy Link To Endorsement")
         linkBtn.setAttribute("title", "Copy Link")
         linkBtn.addEventListener("click", function() {
-            navigator.clipboard.writeText(`https://aakashpereira.github.io/Endorsements-Pinboard#${endorsementID}`);
+            navigator.clipboard.writeText(`http://127.0.0.1:5500/#${endorsementID}`);
         })
         endorsementFooter.insertAdjacentElement("afterbegin", linkBtn)
     }
@@ -100,11 +100,11 @@ function clearEndorsements() {
     endorsementsContainer.innerHTML = ""
 }
 
-  window.addEventListener('load', function () {
-    setTimeout(function() {
+window.onload = function () {
         if(window.location.hash) {
-            let el = document.getElementById(window.location.hash.replace("#", ""))
-            el.scrollIntoView({ behavior: "smooth", block: "end"})
+            setTimeout(function() {
+                let el = document.getElementById(window.location.hash.replace("#", ""))
+                el.scrollIntoView({ behavior: "smooth", block: "end"})
+            }, 400)
         }
-    }, 5000)
-  })
+  }
