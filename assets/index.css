@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #1b1924;
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.endorsement {
+    font-family: "Inter", sans-serif;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#publish-btn {
+    background-color: #28a9f1;
+    color: #04131c;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.endorsement {
+    background: #FFF;
+    border-radius: 5px;
+    padding: 10px;
+    color: #04131c;
+    margin-bottom: 10px;
+}
+
+.endorsement-comment {
+    margin-bottom: 0;
+}
+
+.endorsement-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.endorsement-footer button {
+    border: 0;
+    background: 0;
+    cursor: pointer;
+}
+
+.like-btn:disabled {
+    opacity: 1;
+    color: #04131c;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.liked {
+    filter: grayscale(1)
+}
+
+footer {
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer a {
+    color: white;
+}
