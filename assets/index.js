@@ -51,10 +51,6 @@ function clearInputFields() {
     endorsementInput.value = fromInput.value = toInput.value = ""
 }
 
-function copyLink() {
-    navigator.clipboard.writeText(`https://aakashpereira.github.io/Endorsements-Pinboard#`);
-}
-
 onValue(endorsementsInDB, function(snapshot) {
     let endorsementsArray = Object.entries(snapshot.val())
     clearEndorsements()
@@ -103,3 +99,12 @@ onValue(endorsementsInDB, function(snapshot) {
 function clearEndorsements() {
     endorsementsContainer.innerHTML = ""
 }
+
+  window.addEventListener('load', function () {
+    setTimeout(function() {
+        if(window.location.hash) {
+            let el = document.getElementById(window.location.hash.replace("#", ""))
+            el.scrollIntoView({ behavior: "smooth", block: "end"})
+        }
+    }, 5000)
+  })
