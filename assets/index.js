@@ -102,9 +102,7 @@ function clearEndorsements() {
 
 window.onload = function () {
         if(window.location.hash) {
-            setTimeout(function() {
                 let el = document.getElementById(window.location.hash.replace("#", ""))
                 el.scrollIntoView({ behavior: "smooth", block: "end"})
-            }, 200)
         }
   }

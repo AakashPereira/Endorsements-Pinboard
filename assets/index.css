@@ -59,6 +59,11 @@ input[type=text], textarea {
     font-family: inherit;
 }
 
+.endorsements-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .endorsement {
     background: #FFF;
     border-radius: 5px;
